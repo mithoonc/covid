@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>COVID-19 Global Live Data</title>
+    <base href="/covid/"/>
+    <meta name="description" content="Track COVID-19 (Corona Virus) country-wise, state-wise with latest news and interactive maps view">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">   
+    <meta http-equiv="Content-Security-Policy" content="block-all-mixed-content">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#1976d2">
+    
+    <script data-ad-client="ca-pub-6781494267973085" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta name="msvalidate.01" content="8C730C3F454DE5E0723391602289725D" />
+    <meta name="yandex-verification" content="c180262a3ded03a7" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <style>
+      /* Make the image fully responsive */
+      .carousel-inner img {
+        width: 100%;
+        height: 100%;
+      }
+      </style>
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-161721170-1"></script>
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    function loadNews(data){                                                                        
+        $('#results').empty()      
+        var srchItems = data.items.sort(function(a,b){
+            return new Date(b.snippet.publishedAt) - new Date(a.snippet.publishedAt);
+            });             
+        $.each(srchItems, function(index, item){
+          if(item.snippet.channelId != "UC2k4E6yh6gxbAUgbjydQbyA" && item.snippet.channelId != "UC775q3eODVvHH1zG2cg3g5g" && item.snippet.channelId !="UC-925PwPMVZKEN59r7Rbndg"){
+            if (index == 0)
+            {
+              $('#results').append('<div class="carousel-item active" style="left: -20px;padding-top: 1rem;padding-bottom: 1rem;"> <h6>' + item.snippet.title + '</h6>' + '<p class="created-by" style="font-size: smaller; line-height: 0.25rem;">' + item.snippet.channelTitle + '</p> <p>' + '<p class="created-by" style="font-size: smaller; line-height: 0.25rem;"> &ensp;' + new Date(item.snippet.publishedAt).toLocaleString() + '</p>' + '<iframe id="yt_players" src="https://www.youtube.com/embed/'+ item.id.videoId + '"" style="width:100%; height:265px" frameborder="0" allowfullscreen></iframe>' + '<p>' + item.snippet.description + '</p>' +  '<a href="https://www.youtube.com/watch?v=' + item.id.videoId + '" target="_blank">Watch this video on YouTube</a>' +'</div>')
+            }
+            else
+            {
+              $('#results').append('<div class="carousel-item" style="left: -20px;padding-top: 1rem;padding-bottom: 1rem;"> <h6>' + item.snippet.title + '</h6>' + '<p class="created-by" style="font-size: smaller; line-height: 0.25rem;">' + item.snippet.channelTitle + '</p> <p>' + '<p class="created-by" style="font-size: smaller; line-height: 0.25rem;"> &ensp;' + new Date(item.snippet.publishedAt).toLocaleString() + '</p>' + '<iframe id="yt_players" src="https://www.youtube.com/embed/'+ item.id.videoId + '"" style="width:100%; height:265px" frameborder="0" allowfullscreen></iframe>' + '<p>' + item.snippet.description + '</p>' +  '<a href="https://www.youtube.com/watch?v=' + item.id.videoId + '" target="_blank">Watch this video on YouTube</a>' +'</div>')
+            }       
+          }
+      })  
+    }
+    
+</script>
+
+  <body>
+        <ngx-app>Loading...</ngx-app>
+    
+    <style>
+      @-webkit-keyframes spin {
+        0% {
+          transform: rotate(0);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @-moz-keyframes spin {
+        0% {
+          -moz-transform: rotate(0);
+        }
+        100% {
+          -moz-transform: rotate(360deg);
+        }
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .spinner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1003;
+        background: #000000;
+        overflow: hidden;
+      }
+      .spinner div:first-child {
+        display: block;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        width: 150px;
+        height: 150px;
+        margin: -75px 0 0 -75px;
+        border-radius: 50%;
+        box-shadow: 0 3px 3px 0 rgba(255, 56, 106, 1);
+        transform: translate3d(0, 0, 0);
+        animation: spin 2s linear infinite;
+      }
+      .spinner div:first-child:after,
+      .spinner div:first-child:before {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+      }
+      .spinner div:first-child:before {
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        box-shadow: 0 3px 3px 0 rgb(255, 228, 32);
+        -webkit-animation: spin 3s linear infinite;
+        animation: spin 3s linear infinite;
+      }
+      .spinner div:first-child:after {
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        box-shadow: 0 3px 3px 0 rgba(61, 175, 255, 1);
+        animation: spin 1.5s linear infinite;
+      }
+    </style>
+    <div id="nb-global-spinner" class="spinner">
+      <div class="blob blob-0"></div>
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="blob blob-4"></div>
+      <div class="blob blob-5"></div>
+    </div>
+    <noscript>Please enable JavaScript to continue using this application.</noscript>
+<script src="/covid/runtime-es2015.js" type="module"></script><script src="/covid/polyfills-es2015.js" type="module"></script><script src="/covid/runtime-es5.js" nomodule></script><script src="/covid/polyfills-es5.js" nomodule></script><script src="/covid/styles-es2015.js" type="module"></script><script src="/covid/styles-es5.js" nomodule></script><script src="/covid/scripts.js"></script><script src="/covid/vendor-es2015.js" type="module"></script><script src="/covid/main-es2015.js" type="module"></script><script src="/covid/vendor-es5.js" nomodule></script><script src="/covid/main-es5.js" nomodule></script></body>
+</html>
