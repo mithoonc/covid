@@ -723,7 +723,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       },*/
       {
         path: '',
-        redirectTo: 'maps/global',
+        redirectTo: 'maps/india',
         pathMatch: 'full'
       }, {
         path: '**',

@@ -561,7 +561,7 @@ const routes = [
             },*/
             {
                 path: '',
-                redirectTo: 'maps/global',
+                redirectTo: 'maps/india',
                 pathMatch: 'full',
             },
             {
