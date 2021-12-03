@@ -70,11 +70,11 @@ const MENU_ITEMS = [
         link: '/pages/maps/global',
         home: true,
     },
-    {
+    /*   {
         title: 'India',
         icon: 'grid-outline',
         link: '/pages/maps/india',
-    },
+      }, */
     {
         title: 'USA',
         icon: 'map-outline',
@@ -575,7 +575,7 @@ const routes = [
             },*/
             {
                 path: '',
-                redirectTo: 'maps/india',
+                redirectTo: 'maps/global',
                 pathMatch: 'full',
             },
             {

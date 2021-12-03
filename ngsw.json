@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1621315052222,
+  "timestamp": 1638518594562,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -336,8 +336,8 @@
     "/Roboto-ThinItalic.ttf": "1cace6dabeeccf6e2e0fad9b5a7b9e1bc5ea191f",
     "/Roboto-ThinItalic.woff": "ea71e1a7f20df5de8048e06c70d0b756b83f867e",
     "/Roboto-ThinItalic.woff2": "cf2e6e6e462a4ff1c980d2c0fdc7b9675a30c82b",
-    "/app-pages-pages-module-es2015.js": "bfab12f0fcd44995a3bef3fc5c983983e6e8762e",
-    "/app-pages-pages-module-es5.js": "3c739275b722e8ffbfe7a76a102a3ea0bb0638c1",
+    "/app-pages-pages-module-es2015.js": "99263de45828766cb2646614ef6b1804a3f478cd",
+    "/app-pages-pages-module-es5.js": "c8deb09ddacff37d354f6458108a578c1a735fba",
     "/assets/data/bingdata.json": "4be67a28fd6431593ef64cce616c5bfe5a64d422",
     "/assets/data/news.json": "8a5fbb9ed14b608bd8f82ec87c6a8a5132e1cbc9",
     "/assets/data/sourcedata.json": "96cc2d7cf823016d4dfbd0459477b9b291f8b4b5",
