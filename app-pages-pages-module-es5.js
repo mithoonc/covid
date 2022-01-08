@@ -109,13 +109,11 @@
         icon: 'globe-outline',
         link: '/pages/maps/global',
         home: true
-      },
-      /*   {
-          title: 'India',
-          icon: 'grid-outline',
-          link: '/pages/maps/india',
-        }, */
-      {
+      }, {
+        title: 'India',
+        icon: 'grid-outline',
+        link: '/pages/maps/india'
+      }, {
         title: 'USA',
         icon: 'map-outline',
         link: '/pages/maps/usa'
